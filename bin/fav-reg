@@ -45,7 +45,7 @@ def binary_path_name(user)
 end
 
 def bin_dir
-  target = Gem.bin_path("favoraretter", "fav-reg", ">= 0")
+  target = Gem.bin_path("snaka-favoraretter", "fav-reg", ">= 0")
   _all_, base_dir, file = target.match(/(.*)\/(.*)/).to_a
   return base_dir
 end

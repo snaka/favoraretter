@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'favoraretter'
-  s.version      = '0.0.5'
+  s.version      = '0.0.6'
 #  s.platform     = Gem::Platform::CURRENT
   s.summary      = 'Watch "favorare" status and notify if "favorare" added.'
   s.description  = s.summary
