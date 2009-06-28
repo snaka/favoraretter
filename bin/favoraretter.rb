@@ -106,7 +106,7 @@ begin
       log "enter main loop..."
       while running?
 
-        sleep 10
+        sleep 600
         log "fetch fav. for #{USER}"
         watch
       end
