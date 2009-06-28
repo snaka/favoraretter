@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name         = 'favoraretter'
-  s.version      = '0.0.2'
-  s.platform     = Gem::Platform::CURRENT
+  s.version      = '0.0.3'
+  s.platform     = Gem::Platform::Win32
   s.summary      = 'Watch "favorare" status and notify if "favorare" added.'
   s.description  = s.summary
   s.require_path = 'bin'
