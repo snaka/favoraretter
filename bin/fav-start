@@ -1,14 +1,8 @@
-@echo off
-rem
-rem  start-watching.bat
-rem
-rem  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
-rem
-
-ruby -x -Ks "%~f0"
-pause
-exit
-
+#
+#  start-watching.bat
+#
+#  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
+#
 #! ruby
 require "readline"
 
@@ -27,4 +21,4 @@ rescue Exception => ex
   puts ex
 end
 
-# vim: ts=2 sw=2 et
+# vim: ts=2 sw=2 et ft=ruby

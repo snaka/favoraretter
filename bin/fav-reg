@@ -1,15 +1,8 @@
-@echo off
-rem
-rem  register.bat
-rem
-rem  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
-rem
-
-ruby -x -Ks "%~f0"
-pause
-exit
-
-#! ruby
+#
+#  register.bat
+#
+#  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
+#
 require "readline"
 
 require "rubygems"
@@ -30,10 +23,11 @@ def register(user)
       :description    => "Favoraretter daemon",
       :start_type     => Service::AUTO_START,
       :error_control  => Service::ERROR_NORMAL,
-      :binary_path_name => %("c:\\Program Files\\ruby-1.8\\bin\\rubyw.exe" -C"#{current_path}" favoraretter.rb #{user}),
+      :binary_path_name => binary_path_name(user),
       :display_name     => "Favoraetter daemon!"
     )
     puts "ふぁぼられ監視サービスを登録しました。"
+    puts ">> #{binary_path_name(user)}"
   end
 end
 
@@ -44,8 +38,16 @@ def user_display_name(user)
   return user
 end
 
-def current_path
-  Dir.pwd.gsub(File::Separator, File::ALT_SEPARATOR)
+def binary_path_name(user)
+  ruby = Gem.ruby
+  dir = bin_dir
+  "\"#{ruby}\" -C\"#{dir}\" favoraretter.rb #{user}".gsub("ruby.exe", "rubyw.exe")
+end
+
+def bin_dir
+  target = Gem.bin_path("favoraretter", "fav-reg", ">= 0")
+  _all_, base_dir, file = target.match(/(.*)\/(.*)/).to_a
+  return base_dir
 end
 
 puts <<EOS

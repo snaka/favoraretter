@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'favoraretter'
-  s.version      = '0.0.4'
+  s.version      = '0.0.5'
 #  s.platform     = Gem::Platform::CURRENT
   s.summary      = 'Watch "favorare" status and notify if "favorare" added.'
   s.description  = s.summary
@@ -10,16 +10,18 @@ Gem::Specification.new do |s|
                        Manifest.txt
                        README.txt
                        Rakefile
-                       bin/start-watching.bat
-                       bin/stop-watching.bat
-                       bin/register.bat
-                       bin/unregister.bat
+                       bin/fav-start
+                       bin/fav-stop
+                       bin/fav-reg
+                       bin/fav-unreg
+                       bin/constant.rb
                        bin/favoraretter.rb ]
 
-  s.executables  = %w[ start-watching.bat 
-                       stop-watching.bat
-                       register.bat
-                       unregister.bat ]
+  # FIXME: Wouldn't copy favoraretter to bin directory. Any workarounds?
+  s.executables  = %w[ fav-start
+                       fav-stop
+                       fav-reg
+                       fav-unreg ]
 
   s.add_dependency 'nokogiri',      '>= 1.3.2' 
   s.add_dependency 'ruby_gntp',     '>= 0.1.1'

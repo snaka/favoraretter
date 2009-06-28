@@ -1,15 +1,8 @@
-@echo off
-rem
-rem  unregister.bat
-rem
-rem  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
-rem
-
-ruby -x -Ks "%~f0"
-pause
-exit
-
-#! ruby
+#
+#  unregister.bat
+#
+#  Copyright (c) 2009 snaka <snaka.gml@gmail.com>
+#
 require "readline"
 
 require "rubygems"
@@ -31,4 +24,4 @@ rescue Exception => ex
   puts ex
 end
 
-# vim: ts=2 sw=2 et
+# vim: ts=2 sw=2 et ft=ruby
