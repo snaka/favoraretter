@@ -1,0 +1,6 @@
+=== 0.0.1 / 2009-06-28
+
+* First beta release.
+
+  * Birthday!
+
